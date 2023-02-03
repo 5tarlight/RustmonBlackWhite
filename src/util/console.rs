@@ -4,7 +4,7 @@ use ansi_term::Color;
 
 pub fn read_line(help: &str) -> String {
     if help.len() > 0 {
-        print!("{}", Color::Red.paint(help));
+        print!("{}", Color::Yellow.paint(help));
         io::stdout().flush().unwrap();
     }
 
@@ -16,4 +16,13 @@ pub fn read_line(help: &str) -> String {
         // TODO : Log and desukete!!!
         return String::new();
     }
+}
+
+pub fn println(str: String) {
+    println!("{}", str);
+}
+
+pub fn print(str: String) {
+    print!("{}", str);
+    io::stdout().flush().unwrap();
 }
