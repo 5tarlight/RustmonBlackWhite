@@ -1,5 +1,5 @@
 use ansi_term::Color;
-use rustmon::util::console;
+use rustmon::{entity::Gender, util::console};
 
 fn main() {
     console::println(format!(
@@ -15,4 +15,16 @@ fn main() {
     }
 
     console::println(format!("{}. 멋진 이름이네.", Color::Yellow.paint(&name)));
+
+    let gender: Gender;
+    loop {
+        let gen = console::read_line("성별은 무엇이니? (M/F) ");
+        if gen == "M" {
+            gender = Gender::Male;
+            break;
+        } else if gen == "F" {
+            gender = Gender::Female;
+            break;
+        }
+    }
 }
