@@ -1,3 +1,5 @@
+use rustmon::util::console::read_line;
+
 fn main() {
-    println!("Hello, world!");
+    read_line("이름을 알려줄래?");
 }
