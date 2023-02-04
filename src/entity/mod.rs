@@ -12,9 +12,9 @@ pub enum Gender {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Player {
-    name: String,
-    gender: Gender,
-    money: f64,
+    pub name: String,
+    pub gender: Gender,
+    pub money: f64,
 }
 
 impl Player {
@@ -64,5 +64,14 @@ impl Player {
                 println!("{:}", err);
             }
         }
+    }
+}
+
+pub fn load_player() -> Option<Player> {
+    if let Ok(data) = fs::read_to_string("./data/player.json") {
+        let player: Player = serde_json::from_str(&data).unwrap();
+        Some(player)
+    } else {
+        None
     }
 }
