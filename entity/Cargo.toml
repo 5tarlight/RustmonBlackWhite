@@ -1,13 +1,10 @@
 [package]
-name = "rustmon"
+name = "entity"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-ansi_term = "0.12.1"
-# soloud = "1"
-console = { path = "./console" }
-game = { path = "./game" }
-entity = { path = "./entity" }
+serde = { version = "1.0.152", features = ["derive"] }
+serde_json = "1.0"

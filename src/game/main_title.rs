@@ -1,7 +1,6 @@
 use ansi_term::Color;
 use console::println;
-
-use crate::entity::{Gender, Player};
+use entity::{Gender, Player};
 
 pub fn create_player() {
     console::println(format!(
