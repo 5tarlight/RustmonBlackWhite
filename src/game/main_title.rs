@@ -2,7 +2,7 @@ use ansi_term::Color;
 
 use crate::{
     entity::{Gender, Player},
-    util::console,
+    util::console::{self, println},
 };
 
 pub fn create_player() {
@@ -33,4 +33,5 @@ pub fn create_player() {
     }
 
     let player = Player::new(name, gender);
+    println(player.to_json());
 }

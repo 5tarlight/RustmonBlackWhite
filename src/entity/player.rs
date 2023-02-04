@@ -1,5 +1,7 @@
 use super::Gender;
+use serde::{Deserialize, Serialize};
 
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Player {
     name: String,
     gender: Gender,
@@ -21,5 +23,9 @@ impl Player {
             gender: self.gender,
             money: self.money,
         }
+    }
+
+    pub fn to_json(&self) -> String {
+        serde_json::to_string(&self).unwrap()
     }
 }
