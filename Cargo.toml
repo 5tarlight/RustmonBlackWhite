@@ -11,3 +11,4 @@ ansi_term = "0.12.1"
 console = { path = "./console" }
 game = { path = "./game" }
 entity = { path = "./entity" }
+logger = { path = "./logger" }

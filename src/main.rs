@@ -1,7 +1,8 @@
 use std::{rc::Rc, thread, time::Duration};
 
 use ::entity::load_player;
-use rustmon::{game::main_title::create_player, logger::Logger};
+use game::main_title::create_player;
+use logger::Logger;
 
 fn main() {
     let (recv, _log_handle) = Logger::new();
