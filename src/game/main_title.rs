@@ -34,4 +34,5 @@ pub fn create_player() {
 
     let player = Player::new(name, gender);
     println(player.to_json());
+    player.save();
 }
