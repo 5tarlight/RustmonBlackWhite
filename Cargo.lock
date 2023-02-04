@@ -40,6 +40,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "game"
+version = "0.1.0"
+dependencies = [
+ "ansi_term",
+ "console",
+]
+
+[[package]]
 name = "itoa"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -75,6 +83,7 @@ version = "0.1.0"
 dependencies = [
  "ansi_term",
  "console",
+ "game",
  "serde",
  "serde_json",
  "soloud",
