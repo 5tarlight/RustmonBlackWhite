@@ -33,6 +33,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "console"
+version = "0.1.0"
+dependencies = [
+ "ansi_term",
+]
+
+[[package]]
 name = "itoa"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -67,6 +74,7 @@ name = "rustmon"
 version = "0.1.0"
 dependencies = [
  "ansi_term",
+ "console",
  "serde",
  "serde_json",
  "soloud",

@@ -1,5 +1,5 @@
 [package]
-name = "rustmon"
+name = "console"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,7 +7,3 @@ edition = "2021"
 
 [dependencies]
 ansi_term = "0.12.1"
-soloud = "1"
-serde = { version = "1.0.152", features = ["derive"] }
-serde_json = "1.0"
-console = { path = "./console" }
